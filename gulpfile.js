@@ -1,6 +1,7 @@
 var gulp = require('gulp');
-var rename = require('gulp-rename');
 var del = require('del');
+var rename = require('gulp-rename');
+var replace = require('gulp-replace');
 
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
@@ -115,8 +116,15 @@ gulp.task('fonts-build', function () {
         .pipe(gulp.dest(dest.fonts));
 });
 
+/*
+ * This step is useful for the automated build process
+ * which deploys JUST the dist/ folder... so we need to
+ * alter the resource paths to look locally. Make sure you
+ * change the source html location appropriately.
+ */
 gulp.task('html-build', function () {
     return gulp.src(src.html)
+        .pipe(replace(/\.\.\/dist\//g, ''))
         .pipe(gulp.dest(dest.html));
 });
 
