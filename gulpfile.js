@@ -25,6 +25,7 @@ var prependBase = function (base, obj) {
 var src = (function () {
     var sources = {
         fonts: '/scss/fonts/*.otf',
+        html: '/../examples/built.html', // Change this to your actual src html
         imgs: '/imgs/*.png',
         js: '/**/*.js',
         sass: '/scss/*.scss'
@@ -38,6 +39,7 @@ var dest = (function () {
     var destinations = {
         css: '/css',
         fonts: '/css/fonts',
+        html: '/',
         imgs: '/imgs',
         js: '/js'
     };
@@ -113,6 +115,12 @@ gulp.task('fonts-build', function () {
         .pipe(gulp.dest(dest.fonts));
 });
 
+gulp.task('html-build', function () {
+    return gulp.src(src.html)
+        .pipe(gulp.dest(dest.html));
+});
+
+
 // Livereload server
 gulp.task('browser-sync', function () {
     browserSync({
@@ -146,4 +154,4 @@ gulp.task('default', ['sass-livereload', 'browser-sync'], function () {
 });
 
 // Just build the files for deployment
-gulp.task('build', ['clean', 'sass-build', 'js-build', 'imgs-build', 'fonts-build'], function () {});
+gulp.task('build', ['clean', 'sass-build', 'js-build', 'imgs-build', 'fonts-build', 'html-build'], function () {});
