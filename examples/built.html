@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../dist/css/main.min.css" />
+</head>
+<body>
+    <div id="target"></div>
+    <script src="../dist/js/main.min.js"></script>
+    <script>
+        // Require syntax
+        Livefyre.require(['stub'], function(Stub) {
+            new Stub({
+                el: document.getElementById('target'),
+                text: "Require! Holy Smokes!!!!"
+            });
+        });
+
+        // CJS syntax
+        // var Stub = Livefyre.require('stub');
+        // new Stub({
+        //     el: document.getElementById('target'),
+        //     text: "CJS! Holy Smokes!!!!"
+        // });
+    </script>
+</body>
+</html>

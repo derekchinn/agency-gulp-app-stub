@@ -1,0 +1,17 @@
+{
+    "name": "ragency-gulp-app-stub",
+    "version": "0.0.0",
+    "description": "A stub project that has a basic folder structure and build system in place.",
+    "authors": [
+        "Derek Chinn <derek@livefyre.com>"
+    ],
+    "dependencies": {
+        "hogan": "~3.0.2",
+        "requirejs": "~2.1.15",
+        "requirejs-hogan-plugin": "git://github.com/millermedeiros/requirejs-hogan-plugin.git#~0.2.1",
+        "jquery": "~2.1.1"
+    },
+    "devDependencies": {
+        "almond": "~0.3.0"
+    }
+}

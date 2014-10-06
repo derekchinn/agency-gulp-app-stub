@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../dist/css/main.css" />
+</head>
+<body>
+    <div id="target"></div>
+    <script src="../lib/jquery/dist/jquery.js"></script>
+    <script src="../lib/requirejs/require.js"></script>
+    <script src="requirejs.conf.js"></script>
+    <script>
+        require(['stub'], function (Stub) {
+            new Stub({
+                el: document.getElementById('target'),
+                text: "Holy Smokes!!!!"
+            });
+        });
+    </script>
+</body>
+</html>

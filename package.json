@@ -1,0 +1,25 @@
+{
+  "name": "agency-gulp-app-stub",
+  "version": "0.0.0",
+  "description": "A stub project that has a basic folder structure and build system in place.",
+  "main": "main.js",
+  "scripts": {
+    "build": "node_modules/gulp/bin/gulp.js build",
+    "postinstall": "node_modules/bower/bin/bower install",
+    "start": "node_modules/gulp/bin/gulp.js"
+  },
+  "author": "Derek Chinn",
+  "dependencies": {
+    "bower": "^1.3.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "del": "^0.1.3",
+    "gulp": "^3.8.8",
+    "gulp-minify-css": "^0.3.10",
+    "gulp-rename": "^1.2.0",
+    "gulp-requirejs": "^0.1.3",
+    "gulp-sass": "^0.7.3",
+    "gulp-uglify": "^1.0.1"
+  }
+}
