@@ -8,19 +8,19 @@
     <script src="../dist/js/main.min.js"></script>
     <script>
         // Require syntax
-        // Livefyre.require(['stub'], function(Stub) {
-        //     new Stub({
-        //         el: document.getElementById('target'),
-        //         text: "Require! Holy Smokes!!!!"
-        //     });
-        // });
+        Livefyre.require(['stub'], function(Stub) {
+            new Stub({
+                el: document.getElementById('target'),
+                text: "Require! Holy Smokes!!!!"
+            });
+        });
 
         // CJS syntax
-        var Stub = Livefyre.require('stub');
-        new Stub({
-            el: document.getElementById('target'),
-            text: "CJS! Holy Smokes!!!!"
-        });
+        // var Stub = Livefyre.require('stub');
+        // new Stub({
+        //     el: document.getElementById('target'),
+        //     text: "CJS! Holy Smokes!!!!"
+        // });
     </script>
 </body>
 </html>
